@@ -1,0 +1,57 @@
+body {
+    overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+body::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+
+#page-header {
+    width: 100vw;
+    height: 70vh;
+    filter: drop-shadow(black 0rem 1rem 10px);
+}
+
+#page-header > #header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 1s;
+}
+
+#page-series > .page-image {
+    width: 18vw;
+    height: 10vmin;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+    filter: drop-shadow(black .2rem .5rem 5px);
+    cursor: pointer;
+    transition: border-color .5s, margin-top .5s;
+    border-radius: 10px;
+    border: solid transparent 5px;
+}
+
+#page-series > .page-image:hover, .page-image-focus {
+    border-color: white!important;
+    margin-top: -1rem;
+}
+
+#page-series {
+    display: flex;
+    gap: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: -13vmin;
+}
+
+#content {
+    width: 94vw;
+    padding: 3vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-wrap: wrap;
+    font-size: 2vmin;
+}
