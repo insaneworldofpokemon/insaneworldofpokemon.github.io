@@ -1,34 +1,110 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=DotGothic16&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="css/home.css" />
         <script defer type="text/javascript" src="js/home.js"></script>
+        
     </head>
     <body>
-        <div id="page-header">
-            <img id="header-image" src="" draggable="false" />
+        <div id="page-header" data-scroll="0">
+            <img id="header-image" loading="eager" src="" draggable="false" />
             <div id="page-series" data-index="0">
-                <img data-index="0" class="page-image page-image-focus" src="https://images.unsplash.com/photo-1540508664702-7839b9d38075" draggable="false" />
-                <img data-index="1" class="page-image" src="https://images.unsplash.com/photo-1552152370-fb05b25ff17d" draggable="false" />
-                <img data-index="2" class="page-image" src="https://images.unsplash.com/photo-1490604001847-b712b0c2f967" draggable="false" />
-                <img data-index="3" class="page-image" src="https://images.unsplash.com/photo-1500964757637-c85e8a162699" draggable="false" />
-                <img data-index="4" class="page-image" src="https://images.unsplash.com/photo-1500817487388-039e623edc21" draggable="false" />
+                <img data-index="0" loading="eager" class="page-image page-image-focus" src="https://images.unsplash.com/photo-1540508664702-7839b9d38075" draggable="false" />
+                <img data-index="1" loading="eager" class="page-image" src="https://images.unsplash.com/photo-1552152370-fb05b25ff17d" draggable="false" />
+                <img data-index="2" loading="eager" class="page-image" src="https://images.unsplash.com/photo-1490604001847-b712b0c2f967" draggable="false" />
+                <img data-index="3" loading="eager" class="page-image" src="https://images.unsplash.com/photo-1500964757637-c85e8a162699" draggable="false" />
+                <img data-index="4" loading="eager" class="page-image" src="https://images.unsplash.com/photo-1500817487388-039e623edc21" draggable="false" />
             </div>
         </div>
-        <div id="content">
-            <span>
-                Disclaimer: Made by a web design amateur. I have never programmed a website before
-                (outside of school),
-                but I watched a few videos to get the feel of it,
-                and now I want to try it with a nice little test project for a FanFiction I like.
-                <br><br>
-                Cheers, Moonshine!
-            </span>
-            <br><br>
-            <span>
-                ...The images are all unsplash stock images for testing purposes...
-            </span>
+        <!-- Content scroll speed from 0 to 10 -->
+        <div id="content" data-content-scroll-speed="10">
+            <div class="content-section visible">
+                <h1>
+                    Welcome to the (Insane) World of Pokémon
+                </h1>
+                <span>
+                    <!-- Welcome to getting your dick ripped off in the first dogfight you see with a hamster vs the literal god of the underworld lmao -->
+                    by <a href="https://www.fanfiction.net/u/12315388">CaptainMoonshine</a>
+                </span>
+                <span class="center">
+                    The world of Pokémon is one filled with many wonders.
+                    Amazing Pokémon and humans live together, hand in hand.
+                    But the scars of the past run deep underneath the surface.
+                    Schemes, secrets, and monsters await.
+                    When the end of the world is only a future away, will our protagonist be able to save the day?
+                    One thing is for sure, he never asked for this shit.
+                </span>
+            </div>
+            <div class="content-section center">
+                <h1>
+                    New Update
+                    <br>
+                    Chapter 130: Out of Time
+                </h1>
+                <span>
+                    Uploaded 16 Jun
+                </span>
+                <span>
+                    <br>
+                    <!--<div class="spoiler">-->
+                    <details>
+                        <summary>
+                            <span class="summary">
+                                Author's Notes:
+                            </span>
+                        </summary>
+                        A/N Man, three chapter updates in a row. How fabulous, talking about fanfiction. Time to shill something.
+                        <br>
+                        Do you like Fanfiction? Most likely not, but in the event you do, I've been working on a youtube channel all about fanfiction. It's called "Generic Self Insert" and it's been going for a while, but I feel confident enough to share it with my own readers now.
+                        <br>
+                        So yeah, it's a channel where I'll review fanfic tropes and fanfics.
+                        <br>
+                        All about fanfiction really.
+                        <br>
+                        I have a problem
+                        <br>
+                        -CaptainMoonshine-
+                    </details>
+                </span>
+                <h1>
+                    Next Chapter
+                    <br>
+                    Chapter 131: ???
+                </h1>
+                <span>
+                </span>
+            </div>
+            <div class="content-section center">
+                <h1>
+                    About the author
+                </h1>
+                <span>
+                    This is some beta text!
+                </span>
+            </div>
+            <div class="content-section center">
+                <h1>
+                    About the web designer
+                </h1>
+                <span>
+                    Disclaimer: Made by a web design amateur. I have never programmed a website before (outside of school), but I watched a few videos to get the feel of it, and now I want to try it with a nice little test project for a FanFiction I like.
+                    <br>
+                    Cheers, Moonshine!
+                    <br>
+                    ...The images are all unsplash stock images for testing purposes...
+                    <br>
+                    Also please tell me if anything looks sore on the eyes. I'm still learning.
+                    <br>
+                    <a href="https://github.com/insaneworldofpokemon/insaneworldofpokemon.github.io">Here's the source, for anyone asking.</a>
+                </span>
+            </div>
         </div>
     </body>
 </html>

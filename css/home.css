@@ -1,17 +1,13 @@
 body {
     overflow: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-body::-webkit-scrollbar { 
-    width: 0;
-    height: 0;
 }
 
 #page-header {
     width: 100vw;
     height: 70vh;
     filter: drop-shadow(black 0rem 1rem 10px);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: transform .1s ease;
 }
 
 #page-header > #header-image {
@@ -51,7 +47,54 @@ body::-webkit-scrollbar {
 #content {
     width: 94vw;
     padding: 3vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-wrap: wrap;
     font-size: 2vmin;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: transform .1s ease;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.content-section {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    opacity: 0;
+    transition: opacity .5s;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.visible {
+    opacity: 1;
+    z-index: 1;
+}
+
+.content-section > h1 {
+    font-family: "Cinzel", serif;
+}
+
+.content-section > span {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 3vh;
+    font-family: "BIZ UDGothic", sans-serif;
+}
+
+.summary {
+    cursor: pointer;
+    user-select: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.spoiler {
+    background-color: black;
+    transition: background-color .5s;
+}
+
+.spoiler:hover {
+    background-color: transparent;
 }
