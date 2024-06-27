@@ -1,8 +1,3 @@
-body {
-    background-color: black;
-    overflow: hidden;
-}
-
 #image-track > .track-image {
     width: 40vmin;
     height: 56vmin;
