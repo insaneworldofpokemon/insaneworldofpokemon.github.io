@@ -63,3 +63,19 @@ window.onwheel = e => {
         }
     }
 }
+
+var touchX = 0, touchY = 0;
+
+window.ontouchstart = e => {
+    touchX = e.touches[0].clientX;
+    touchY = e.touches[0].clientY;
+}
+
+window.ontouchmove = e => {
+    e.deltaX = touchX - e.touches[0].clientX;
+    e.deltaY = touchY - e.touches[0].clientY;
+
+    window.onwheel(e);
+
+    window.ontouchstart(e);
+}
