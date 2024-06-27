@@ -30,24 +30,35 @@ window.onmousemove = e => {
     }
 }
 
-// Reminder: Add lower bounds
 window.onwheel = e => {
-    header.dataset.scroll = Math.min(parseInt(header.dataset.scroll) - e.deltaY, 0);
-    header.style.transform = `matrix(1, 0, 0, 1, 0, ${header.dataset.scroll})`;
-    if(header.dataset.scroll > window.innerHeight * -.7) {
-        content.style.transform = `matrix(1, 0, 0, 1, 0, ${header.dataset.scroll})`;
+    const nextScroll = Math.min(parseInt(header.dataset.scroll) - e.deltaY, 0);
+    if(nextScroll > window.innerHeight * -.7) {
+        header.style.transform = `matrix(1, 0, 0, 1, 0, ${nextScroll})`;
+        content.style.transform = `matrix(1, 0, 0, 1, 0, ${nextScroll})`;
+        header.dataset.scroll = nextScroll;
     } else {
         content.style.transform = `matrix(1, 0, 0, 1, 0, ${window.innerHeight * -.7})`;
         const opacityPercent = parseInt(header.dataset.scroll) / window.innerHeight * -1 - .5,
             children = content.getElementsByClassName("content-section"),
             falseIndex = Math.floor(opacityPercent),
             index = falseIndex / (11 - parseInt(content.dataset.contentScrollSpeed));
+        if(index < children.length - 1 || nextScroll > parseInt(header.dataset.scroll)) {
+            header.style.transform = `matrix(1, 0, 0, 1, 0, ${nextScroll})`;
+            header.dataset.scroll = nextScroll;
+        }
         if(index % 1 != 0) return;
         for(let i = 0; i < children.length; i++) {
             if(i == index) {
                 children[i].classList.add("visible");
+                children[i].classList.remove("above");
+                children[i].classList.remove("below");
             } else {
                 children[i].classList.remove("visible");
+                if(i == index - 1) {
+                    children[i].classList.add("above");
+                } else if(i == index + 1) {
+                    children[i].classList.add("below");
+                }
             }
         }
     }

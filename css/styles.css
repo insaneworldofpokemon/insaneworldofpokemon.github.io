@@ -10,4 +10,5 @@ body {
     background: rgb(169,235,249);
     background: linear-gradient(126deg, rgba(169,235,249,1) 0%, rgba(9,148,243,1) 81%, rgba(218,73,212,1) 100%); 
     margin: 0rem;
+    color: black;
 }

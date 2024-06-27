@@ -59,15 +59,24 @@ body {
     grid-row-start: 1;
     grid-column-start: 1;
     opacity: 0;
-    transition: opacity .5s;
+    transition: opacity .5s, margin-top .5s;
     display: flex;
     flex-direction: column;
     z-index: 0;
 }
 
+.above {
+    margin-top: -2vh;
+}
+
+.below {
+    margin-top: 2vh;
+}
+
 .visible {
     opacity: 1;
     z-index: 1;
+    margin-top: 0;
 }
 
 .content-section > h1 {
