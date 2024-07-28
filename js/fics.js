@@ -1,6 +1,12 @@
 const track = document.getElementById("image-track");
 var touchX = 0, touchY = 0;
 
+for(const image of track.getElementsByClassName("track-image")) {
+    image.onclick = e => {
+        console.log("Open description event");
+    }
+}
+
 window.onmousedown = e => {
     track.dataset.mouseDownAt = e.clientX;
 }
